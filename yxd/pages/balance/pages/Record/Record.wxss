@@ -1,0 +1,7 @@
+.list_box{width: 686rpx;margin:  0 auto}
+.clearfix{clear: both}
+.list_box .list .name{float: left;font-size: 32rpx;color: #333;display: block;line-height: 98rpx}
+.list_box .list .time{float: left;font-optical-sizing: 24;color: #999;display: block;line-height: 98rpx;
+margin-left: 24rpx;}
+.list_box .list .number{float: right;display: block;font-size: 28rpx;color: #666;line-height: 98rpx}
+.list_box .list{border-bottom: 2rpx solid #DCDCDC}

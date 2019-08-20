@@ -1,0 +1,7 @@
+<view class="photo">
+  <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/monery.png"></image>
+  <text class="text">余额</text>
+  <text class="monery">￥<text>2233</text></text>
+</view>
+<view class="btn" catchtap="tobalance"><text>提现</text></view>
+<view class="History" catchtap="toRecord">历史记录</view>

@@ -1,0 +1,32 @@
+<view class="header">
+    <view class="content_box">
+      <view class="photo">
+      </view>
+    <view class="name_box">
+      <view class="name">
+        <text>立即登录</text>
+      </view>
+      <view class="address">
+        <text>地点：辽宁省沈阳市沈阳区哈尔滨路</text>
+      </view>
+       <view class="phone">
+        <text>电话：11111111111</text>
+      </view>
+        <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/modify.png" class="modify" catchtap="tomodify"></image>
+    </view>
+  
+    <view class="clearfix"></view>
+    </view>
+</view>
+<view class="balance" catchtap="tobalance">
+  <text>余额提现</text>
+</view>
+<view class="card" catchtap="toaddcard">
+  <text>银行卡</text>
+</view>
+<view class="time" catchtap="tokey">
+  <text>重要时刻</text>
+</view>
+<view class="Customer">
+  <text>我的客服</text>
+</view>

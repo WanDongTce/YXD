@@ -1,0 +1,19 @@
+.title text{font-size: 32rpx;color: #333;display: block;text-align: center;height: 32rpx;line-height: 32rpx}
+.title{margin-top: 20rpx}
+.clearfix{clear: both}
+.list_box{width: 652rpx;margin: 0 auto;margin-top: 30rpx}
+.list_box .name{width: 160rpx;margin: 0 auto;background-color: #E6E6E6;border-radius: 15rpx}
+.list_box .name text{display: block;text-align: center;font-size: 28rpx;line-height: 56rpx}
+.list_box .content .list{width: 322rpx;padding-bottom: 26rpx;position: relative}
+.list_box .content .list:nth-child(even){border-right: 8rpx solid #E6E6E6;display: block;float: left}
+.list_box .content .list:nth-child(odd){border-left: 8rpx solid #E6E6E6;display: block;float: right}
+.list_box .content .list text{font-size: 28rpx;display: block}
+.list_box .content .list:nth-child(2) text{margin-top: 32rpx}
+.list_box .content .list:nth-child(even) text{padding-right: 38rpx}
+.list_box .content .list:nth-child(odd) text{padding-left: 38rpx}
+
+.list_box .content .list:nth-child(even) .spot{width: 20rpx;height: 20rpx;background-color: #FF5B5B;
+border-radius: 50%;position: absolute;top: 0;right: -14rpx}
+.list_box .content .list:nth-child(2) .spot{top:32rpx }
+.list_box .content .list:nth-child(odd) .spot{width: 20rpx;height: 20rpx;background-color: #FF5B5B;
+border-radius: 50%;position: absolute;top: 0;left: -14rpx}

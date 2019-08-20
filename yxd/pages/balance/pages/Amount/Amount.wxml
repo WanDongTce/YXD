@@ -1,0 +1,28 @@
+<view class="box">
+  <view class="card">
+    <view class="bank">
+      <view class="left">
+        <text>到账银行卡</text>
+      </view>
+      <view class="right">
+        <text class="banke_sun" catchtap='showRule'>中国建设银行(7586)</text>
+        <text class="time">2小时内到账</text>
+      </view>
+      <view class="clearfix"></view>
+    </view>
+  </view>
+  <view class="monery">
+    <view class="name"><text>提现金额</text></view>
+    <view class="text"><input type="number"></input></view>
+    <view class="balance"><text>余额：￥2333</text></view>
+  </view>
+  <view class="btn">提现</view>
+</view>
+<view class="layer_box {{isRuleTrue?'isRuleShow':'isRuleHide'}}" bindtap='hideRule'>
+  <view class="layer Choice">
+    <view class="list class" catchtap="Choice"><text>中国建设银行（7586）</text></view>
+    <view class="list" catchtap="Choice"><text>中国建设银行（7586）</text></view>
+    <view class="list" catchtap="Choice"><text>中国建设银行（7586）</text></view>
+    <view class="list" catchtap="Choice"><text>中国建设银行（7586）</text></view>
+  </view>
+</view>

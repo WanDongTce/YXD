@@ -1,0 +1,19 @@
+/* pages/loginsun/pages/login/login.wxss */
+.title_box{width: 622rpx;margin: 0 auto;margin-top: 100rpx}
+.title_box text{display: block;font-size: 40rpx;height: 40rpx;line-height: 40rpx;
+font-weight: bold}
+.username{margin-top: 68rpx}
+.username .content_box{width: 622rpx;margin: 0 auto}
+.username .content_box input{display: block;width: 100%;font-size: 28rpx;border-bottom: 2rpx solid #E6E6E6;
+height: 92rpx}
+
+.password{margin-top: 28rpx}
+.password .content_box{width: 622rpx;margin: 0 auto}
+.password .content_box input{display: block;width: 100%;font-size: 28rpx;border-bottom: 2rpx solid #E6E6E6;
+height: 92rpx}
+
+.btn{width: 480rpx;margin: 0 auto;background-color: #4BACE1;color: #fff;border-radius: 36rpx;
+margin-top: 100rpx}
+.btn text{display: block;text-align: center;line-height: 72rpx}
+.register{width: 480rpx;margin: 0 auto;text-align: right;font-size: 28rpx;color: #333;height: 28rpx;line-height: 28rpx;margin-top: 40rpx}
+.register text{color: #4BACE1}

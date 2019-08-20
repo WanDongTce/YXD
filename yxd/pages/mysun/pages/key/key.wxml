@@ -1,0 +1,17 @@
+<view class="title">
+  <text>2019年7月15日 加入有言</text>
+</view>
+<view class="list_box">
+ 
+  <view class="content">
+   <view class="name">
+    <text>2019年</text>
+  </view>
+    <view class="list" wx:for="{{list}}">
+      <text>{{item.content}}</text>
+      <view class="spot"></view>
+    </view>
+    <view class="clearfix"></view>
+  </view>
+
+</view>

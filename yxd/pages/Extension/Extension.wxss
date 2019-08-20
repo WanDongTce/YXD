@@ -1,0 +1,22 @@
+/* pages/Extension/Extension.wxss */
+.clearfix{clear: both}
+.header{background-color: #4bace1;padding-bottom: 26rpx;padding-top: 26rpx}
+.header .btn{width: 157rpx;margin: 0 auto}
+.header .btn text{display: block;color: #fff;height: 32rpx;font-size: 28rpx;padding-top: 8rpx}
+.header .btn text:nth-child(1){float: left}
+.header .btn text:nth-child(2){float: right}
+.header .btn .active{font-size: 40rpx;line-height: 40rpx;padding-top: 0rpx}
+.list_box .title .text{width: 30%;float: left;height: 94rpx}
+.list_box .title .text text{display: block;text-align: center;font-size: 32rpx;color: #333;line-height: 94rpx}
+.list_box .title .text:nth-child(1){width: 10%}
+.list_box .content_box{width: 686rpx;margin: 0 auto}
+
+.list_box .content .text{width: 30%;float: left;height: 94rpx}
+.list_box .content .text text{display: block;text-align: center;font-size: 32rpx;color: #333;line-height: 94rpx}
+.list_box .content .text:nth-child(1){width: 10%}
+.list_box .content .list:nth-child(odd){background-color: #FFFAF1}
+.list_box .content .list:nth-child(even){background-color: #FFF1DA}
+.Total{width: 458rpx;margin: 0 auto;margin-top: 60rpx}
+.Total text{font-size: 28rpx;color: #999999;display: block}
+.Total text:nth-child(1){float: left}
+.Total text:nth-child(2){float: right}

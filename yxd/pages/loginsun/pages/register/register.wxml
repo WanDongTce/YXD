@@ -1,0 +1,37 @@
+<view class="title_box">
+  <text>Welcome</text>
+</view>
+<view class="username">
+  <view class="content_box">
+    <input type="number" placeholder="请输入账号" bindinput="user_right_phone" name="modify_phone"></input>
+  </view>
+</view>
+<view class="Verification">
+  <view class="content_box">
+    <input type="text" placeholder="请输入验证码" bindinput="user_right_codes" name="modify_verifycode"></input>
+     <text class="{{verify_color? 'c_999' : 'c_gf'}}" bindtap="identify">{{verifyCodeTime}}</text>
+     <view class="clearfix"></view>
+  </view>
+ 
+</view>
+<view class="password">
+  <view class="content_box">
+    <input type="password" placeholder="请输入密码" bindinput="user_right_password"></input>
+  </view>
+</view>
+<view class="confirm">
+  <view class="content_box">
+    <input type="password" placeholder="确认密码" bindinput="confirm_right_password"></input>
+  </view>
+</view>
+<view class="Invitation">
+  <view class="content_box">
+    <input type="text" placeholder="请输入邀请码" bindinput="Invitation_right_password"></input>
+  </view>
+</view>
+<view class="btn" catchtap="bindFormSubmit">
+  <text>注册</text>
+</view>
+<view class="register">
+  已有账号去，<text>登录</text>
+</view>

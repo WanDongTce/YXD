@@ -1,0 +1,58 @@
+<view class="header">
+  <view class="top_box">
+    <text class="number">{{price}}</text>
+    <text class="text">余额</text>
+  </view>
+  <view class="bottom_box">
+    <view class="left">
+      <text class="number">{{usersum}}</text>
+      <text class="text">推广专员</text>
+    </view>
+     <view class="right">
+      <text class="number">{{total_price}}</text>
+      <text class="text">累计收益</text>
+    </view>
+    <view class="clearfix"></view>
+  </view>
+</view>
+<view class="banner">
+  <view class="content_box" >
+    <swiper>
+      <swiper-item wx:for="{{bannerlist}}">
+        <image src="{{item.img_dir}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
+<view class="VIP">
+  <view class="content_box">
+    <view class="name">
+      <text>有言VIP</text>
+    </view>
+    <view class="number">
+      剩余<text>{{card_num}}</text>张
+    </view>
+    <view class="btn">
+      <view class="Extension_sun">
+        <text>推广</text>
+      </view>
+      <view class="supplement" catchtap="toRecharge">
+        <text>补充</text>
+      </view>
+      <view class="clearfix"></view>
+    </view>
+  </view>
+</view>
+<view class="Extension">
+  <view class="content_box">
+     <view class="name">
+      <text>推广专员</text>
+    </view>
+    <view class="number">
+      <text>{{gym_no}}</text>
+      <view class="btn">
+        复制
+      </view>
+    </view>
+  </view>
+</view>

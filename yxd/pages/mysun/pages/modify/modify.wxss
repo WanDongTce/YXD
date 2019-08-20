@@ -1,0 +1,34 @@
+/* pages/mysun/pages/modify/modify.wxss */
+.clearfix{ clear: both}
+.header{width: 686rpx;margin: 0 auto;border-bottom: 2rpx solid #DCDCDC;padding-top: 24rpx;padding-bottom: 32rpx}
+.header .name text{display: block;font-size: 32rpx;color: #333;padding-top: 48rpx}
+.header .name{ float: left}
+.header .photo{float: right;width: 134rpx;height: 134rpx;border-radius: 50%;border: 2rpx solid #f6f6fc}
+.name_box .content_box{width: 686rpx;margin: 0 auto;border-bottom: 2rpx solid #DCDCDC;}
+.name_box .content_box .name{width: 50%;float: left}
+.name_box .content_box .name text{display: block;line-height: 98rpx}
+.name_box .content_box .text{width: 50%;float: left}
+.name_box .content_box .text input{display: block;width: 100%;height: 90rpx;text-align: right}
+
+.Gender .content_box{width: 686rpx;margin: 0 auto;border-bottom: 2rpx solid #DCDCDC;}
+.Gender .content_box .name{width: 50%;float: left}
+.Gender .content_box .name text{display: block;line-height: 98rpx}
+
+.Gender .content_box .text {display: block;width: 50%;height: 90rpx;text-align: right; float: right}
+.Gender .content_box .text .picker{line-height: 98rpx}
+
+.phone .content_box{width: 686rpx;margin: 0 auto;border-bottom: 2rpx solid #DCDCDC;}
+.phone .content_box .name{width: 50%;float: left}
+.phone .content_box .name text{display: block;line-height: 98rpx}
+.phone .content_box .text{width: 50%;float: left}
+.phone .content_box .text input{display: block;width: 100%;height: 90rpx;text-align: right}
+
+
+.address .content_box{width: 686rpx;margin: 0 auto;border-bottom: 2rpx solid #DCDCDC;}
+.address .content_box .name{width: 20%;float: left}
+.address .content_box .name text{display: block;line-height: 98rpx}
+
+.address .content_box .text {display: block;width: 80%;height: 90rpx;text-align: right; float: right}
+.address .content_box .text .picker{line-height: 98rpx;height: 98rpx}
+.Account text{display: block;width: 686rpx;margin: 0 auto;line-height: 98rpx;border-bottom: 2rpx solid #DCDCDC;
+background-image: url(http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/more.png);background-repeat: no-repeat;background-size: 12rpx 22rpx;background-position: center right}

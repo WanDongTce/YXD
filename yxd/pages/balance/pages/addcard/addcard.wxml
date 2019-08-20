@@ -1,0 +1,31 @@
+<!--pages/balance/pages/addcard/addcard.wxml-->
+<view class="list_box">
+  <view class="list">
+    <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/JSbd.png" class="bd"></image>
+    <view class="content">
+      <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/logo.png" class="logo"></image>
+      <text class="name">中国建设银行</text>
+      <view class="clearfix"></view>
+      <view class="number">
+        <text>**** **** **** 1234</text>
+      </view>
+    </view>
+  </view>
+   <view class="list">
+    <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/JSbd.png" class="bd"></image>
+    <view class="content">
+      <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/logo.png" class="logo"></image>
+      <text class="name">中国建设银行</text>
+      <view class="clearfix"></view>
+       <view class="number">
+        <text>**** **** **** 1234</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="add" catchtap="topassword">
+  <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/addcard.png"></image>
+  <text>添加银行卡</text>
+  <view class="clearfix"></view>
+
+</view>

@@ -1,0 +1,9 @@
+<!--pages/mysun/pages/Recharge/Recharge.wxml-->
+<view class="box">
+  <view class="content_box" wx:for="{{list}}">
+    <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/VIP.png" class="VIP"></image>
+    <image src="{{item.img_dir}}" class="monery"></image>
+    <text>抵5张VIP卡 另外赠送2张VIP卡</text>
+    <view class="btn">立即购买</view>
+  </view>
+</view>

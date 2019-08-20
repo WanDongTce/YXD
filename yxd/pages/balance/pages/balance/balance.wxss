@@ -1,0 +1,10 @@
+/* pages/balance/pages/balance/balance.wxss */
+.photo image{width: 86rpx;height: 86rpx;display: block;margin: 0 auto;margin-top: 66rpx}
+.photo .text{font-size: 32rpx;color: #333;display: block;line-height: 32rpx;height: 32rpx;text-align: center;
+margin-top: 60rpx}
+.photo .monery{font-size: 40rpx;color: #333;font-weight: bold;text-align: center;display: block;height: 70rpx;
+margin-top: 15rpx}
+.photo .monery text{font-size: 70rpx;color: #333}
+.btn{width: 480rpx;height: 66rpx;margin: 0 auto;background-color: #4BACE1;margin-top: 88rpx;border-radius: 15rpx;}
+.btn text{font-size: 32rpx;color: #fff;display: block;text-align: center;line-height: 66rpx}
+.History{font-size: 28rpx;color: #4BACE1;text-align: center;height: 28rpx;line-height: 28rpx;margin-top: 36rpx;}

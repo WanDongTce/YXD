@@ -1,0 +1,27 @@
+<!--pages/balance/pages/Record/Record.wxml-->
+<view class="list_box">
+  <view class="list">
+    <text class="name">建设银行</text>
+    <text class="time">08-13 10:46</text>
+    <text class="number">-1000</text>
+    <view class="clearfix"></view>
+  </view>
+  <view class="list">
+    <text class="name">建设银行</text>
+    <text class="time">08-13 10:46</text>
+    <text class="number">-1000</text>
+    <view class="clearfix"></view>
+  </view>
+  <view class="list">
+    <text class="name">建设银行</text>
+    <text class="time">08-13 10:46</text>
+    <text class="number">-1000</text>
+    <view class="clearfix"></view>
+  </view>
+  <view class="list">
+    <text class="name">建设银行</text>
+    <text class="time">08-13 10:46</text>
+    <text class="number">-1000</text>
+    <view class="clearfix"></view>
+  </view>
+</view>

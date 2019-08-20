@@ -1,0 +1,40 @@
+.header{width: 100%;height: 330rpx;background-image: url(http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/index/header_bd.png);background-size: 100% 330rpx}
+.clearfix{clear: both}
+.header .top_box text{color: #fff}
+.header .top_box .number{font-size: 90rpx;display: block;font-weight: bold;height: 75rpx;line-height: 75rpx;
+text-align: center;padding-top: 73rpx}
+.header .top_box .text{display: block;text-align: center;font-size: 32rpx;height: 32rpx;line-height: 32rpx;
+margin-top: 16rpx}
+.header .bottom_box{width: 686rpx;margin: 0 auto;margin-top: 25rpx}
+.header .bottom_box .left{float: left;width: 50%}
+.header .bottom_box .right{float: right;width: 50%}
+.header .bottom_box text{display: block}
+.header .bottom_box .number{font-size: 50rpx;text-align: center;color: #fff;height: 40rpx;line-height: 40rpx;
+font-weight: bold}
+.header .bottom_box .text{font-size: 24rpx;text-align: center;color: #fff;margin-top: 16rpx;}
+.banner{margin-top: 25rpx}
+.banner .content_box{width: 709rpx;margin: 0 auto;}
+.banner .content_box image{width: 709rpx;height: 160rpx}
+.banner swiper{height: 160rpx !important;}
+.banner swiper-item{height: 160rpx !important;}
+.VIP{margin-top: 25rpx}
+.VIP .content_box{width: 705rpx;margin: 0 auto;height: 269rpx;background-image: url(http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/index/VIP02.png);background-size: 100% 100%;border-radius: 15rpx;overflow: hidden}
+.VIP .content_box .name text{font-size: 32rpx;color: #fff;height: 32rpx;line-height: 32rpx;display: block;
+margin-top: 24rpx;margin-left: 44rpx}
+.VIP .content_box .number{text-align: center;font-size: 30rpx;color: #fff;font-weight: bold;}
+.VIP .content_box .number text{font-size: 80rpx;display: inline-block;line-height: 70rpx}
+.VIP .content_box .btn{width: 398rpx;margin: 0 auto;margin-top: 48rpx}
+.VIP .content_box .btn .Extension_sun{float: left;width: 118rpx;height: 48rpx;border: 2rpx solid #fff;
+border-radius: 10rpx}
+.VIP .content_box .btn .supplement{float: right;width: 118rpx;height: 48rpx;border: 2rpx solid #fff;
+border-radius: 10rpx}
+.VIP .content_box .btn text{display: block;font-size: 28rpx;line-height: 48rpx;text-align: center;color: #fff}
+
+.Extension{margin-top: 25rpx}
+.Extension .content_box{width: 705rpx;margin: 0 auto;height: 269rpx;background-image: url(http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/index/Extension.png);background-size: 100% 100%;border-radius: 15rpx;overflow: hidden}
+.Extension .content_box .name text{font-size: 32rpx;color: #fff;height: 32rpx;line-height: 32rpx;display: block;
+margin-top: 24rpx;margin-left: 44rpx}
+.Extension .content_box .number{width: 436rpx;margin: 0 auto;margin-top: 48rpx}
+.Extension .content_box .number text{font-size: 30rpx;display: block;float: left;color: #fff;line-height: 52rpx}
+.Extension .content_box .number .btn{float: right;font-size: 30rpx;line-height: 48rpx;border: 2rpx solid #fff;
+width: 118rpx;text-align: center;color: #fff;border-radius: 15rpx}

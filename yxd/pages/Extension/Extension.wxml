@@ -1,0 +1,46 @@
+<view class="header">
+    <view class="btn">
+      <text class="{{currentTab==0?'active':''}}" catchtap="click" data-index="0">推广</text>
+      <text class="{{currentTab==1?'active':''}}" catchtap="click" data-index="1">用户</text>
+      <view class="clearfix"></view>
+    </view>
+</view>
+<view class="list_box">
+ <view class="content_box">
+   <view class="title">
+    <view class="text"></view>
+    <view class="text">
+      <text>名字</text>
+    </view>
+    <view class="text">
+      <text>推广员</text>
+    </view>
+    <view class="text">
+      <text>用户数</text>
+    </view>
+    <view class="clearfix"></view>
+  </view>
+  <view class="content">
+    <view class="list" wx:for="{{list}}">
+      <view class="text">
+       <text>{{index+1}}</text>
+      </view>
+      <view class="text">
+        <text>{{item.realname}}</text>
+      </view>
+      <view class="text">
+        <text>{{item.sum}}</text>
+      </view>
+      <view class="text">
+        <text>{{item.usersum}}</text>
+      </view>
+      <view class="clearfix"></view>
+    </view>
+  </view>
+ </view>
+</view>
+<view class="Total">
+  <text>总计：{{zj}}人</text>
+  <text>累计：{{lj}}人</text>
+  <view class="clearfix"></view>
+</view>
