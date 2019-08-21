@@ -31,7 +31,8 @@ Page({
     index: 0,
     username:"",
     mobile:"",
-    address_sun:""
+    address_sun:"",
+    imgurl:""
   },
   username:function(e){
     console.log(e.detail.value)
@@ -39,7 +40,7 @@ Page({
     var x = wx.getStorageSync("userinfo")
     var id = x.id
     wx.request({
-      url: app.requestUrl + 'yuxile/public/index.php/api/Index/UserEdit',
+      url: app.requestUrl + 'api/index/UserEdit',
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
@@ -54,6 +55,7 @@ Page({
           username: res.data.data.username,
           mobile: res.data.data.mobile,
           address_sun: res.data.data.address,
+         
         })
       }
     })
@@ -65,9 +67,11 @@ Page({
       index: e.detail.value
     })
   },
-  toChangePassword:function(){
+  toChangePassword: function (event){
+    var x=event.currentTarget.dataset.type
+    console.log(x)
     wx.navigateTo({
-      url: '/pages/mysun/pages/ChangePassword/ChangePassword'
+      url: '/pages/mysun/pages/ChangePassword/ChangePassword?type='+x 
     })
   },
   /**
@@ -76,7 +80,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     that.getuser()
-    if (wx.getStorageSync('global_cityData')) {
+    if (wx.getStorageSync('global_cityData')!="") {
       var cityArray = wx.getStorageSync('global_cityData');
     } else {
       //定义三列空数组
@@ -85,6 +89,7 @@ Page({
         [],
         [],
       ];
+      console.log(1113242424334)
       for (let i = 0, len = arrays.length; i < len; i++) {
         
         switch (arrays[i]['level']) {
@@ -122,7 +127,7 @@ getuser:function(){
   var id = x.id
   console.log(id)
   wx.request({
-    url: app.requestUrl +'yuxile/public/index.php/api/Index/UserEdit',
+    url: app.requestUrl +'api/index/UserEdit',
     method: "POST",
     header: {
       "Content-Type": "application/x-www-form-urlencoded"
@@ -137,7 +142,8 @@ getuser:function(){
         mobile: res.data.data.mobile,
         
         address_sun: res.data.data.province + res.data.data.city + res.data.data.area,
-        index:res.data.data.sex
+        index:res.data.data.sex,
+        imgurl: res.data.data.header
       })
     }
   })
@@ -180,7 +186,7 @@ getuser:function(){
     var x = wx.getStorageSync("userinfo")
     var id = x.id
       wx.request({
-        url: app.requestUrl + 'yuxile/public/index.php/api/Index/UserEdit',
+        url: app.requestUrl + 'api/index/UserEdit',
         method: "POST",
         header: {
           "Content-Type": "application/x-www-form-urlencoded"
@@ -245,6 +251,7 @@ getuser:function(){
             di = arrays[i]['di'];
           }
         }
+        
         for (let i = 0, len = arrays.length; i < len; i++) {
           if (arrays[i]['sheng'] == sheng && arrays[i]['level'] == 3 && arrays[i]['di'] == di) {
             

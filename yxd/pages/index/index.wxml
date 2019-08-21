@@ -50,9 +50,12 @@
     </view>
     <view class="number">
       <text>{{gym_no}}</text>
-      <view class="btn">
+      <view class="btn" catchtap="copyBtn">
         复制
       </view>
     </view>
   </view>
+</view>
+<view class="layer_box">
+
 </view>

@@ -2,7 +2,9 @@
   <view class="name">
     <text>头像</text>
   </view>
-  <view class="photo"></view>
+  <view class="photo">
+    <image src="{{imgurl}}"></image>
+  </view>
   <view class="clearfix"></view>
 </view>
 <view class="name_box">
@@ -54,16 +56,16 @@
         <picker class="placeholder" mode="multiSelector" 
 bindchange="func_changeCitysChange" 
 bindcolumnchange="func_changeCitysChangeColumn" value="{{ citysIndex }}" range="{{ cityArray }}">
-  <view class="picker">{{address}}</view>
+  <view class="picker">{{address_sun}}</view>
 </picker>
       </view>
     </view>
     <view class="clearfix"></view>
   </view>
 </view>
-<view class="Account" catchtap="toChangePassword">
+<view class="Account" catchtap="toChangePassword" data-type="1">
   <text>账号密码</text>
 </view>
-<view class="Account" catchtap="toChangePassword">
+<view class="Account" catchtap="toChangePassword" data-type="2">
   <text>提现密码</text>
 </view>

@@ -25,7 +25,7 @@ Page({
    var x=wx.getStorageSync("userinfo")
    var id=x.id
    wx.request({
-     url: app.requestUrl + '/yuxile/public/index.php/api/index/getImportList',
+     url: app.requestUrl + 'api/index/getImportList',
      method: "POST",
      header: {
        "Content-Type": "application/x-www-form-urlencoded"

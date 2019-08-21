@@ -3,7 +3,8 @@
 .header{width: 686rpx;margin: 0 auto;border-bottom: 2rpx solid #DCDCDC;padding-top: 24rpx;padding-bottom: 32rpx}
 .header .name text{display: block;font-size: 32rpx;color: #333;padding-top: 48rpx}
 .header .name{ float: left}
-.header .photo{float: right;width: 134rpx;height: 134rpx;border-radius: 50%;border: 2rpx solid #f6f6fc}
+.header .photo{float: right;width: 134rpx;height: 134rpx;border-radius: 50%;border: 2rpx solid #f6f6fc;overflow: hidden}
+.header .photo image{width: 100%;height: 100%}
 .name_box .content_box{width: 686rpx;margin: 0 auto;border-bottom: 2rpx solid #DCDCDC;}
 .name_box .content_box .name{width: 50%;float: left}
 .name_box .content_box .name text{display: block;line-height: 98rpx}

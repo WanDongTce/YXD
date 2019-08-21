@@ -3,7 +3,8 @@
 </view>
 <view class="username">
   <view class="content_box">
-    <input type="number" placeholder="请输入账号" bindinput="user_right_phone" name="modify_phone"></input>
+    <input type="number" placeholder="请输入账号" bindinput="user_right_phone" name="modify_phone"
+    maxlength="11"></input>
   </view>
 </view>
 <view class="Verification">
@@ -29,9 +30,9 @@
     <input type="text" placeholder="请输入邀请码" bindinput="Invitation_right_password"></input>
   </view>
 </view>
-<view class="btn" catchtap="bindFormSubmit">
+<button class="btn" bindgetuserinfo="bindFormSubmit" open-type="getUserInfo" hover-class='none'>
   <text>注册</text>
-</view>
+</button>
 <view class="register">
   已有账号去，<text>登录</text>
 </view>

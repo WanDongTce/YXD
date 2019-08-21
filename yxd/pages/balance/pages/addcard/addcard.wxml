@@ -1,27 +1,17 @@
 <!--pages/balance/pages/addcard/addcard.wxml-->
 <view class="list_box">
-  <view class="list">
-    <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/JSbd.png" class="bd"></image>
+  <view class="list" wx:for="{{list}}">
+    <image src="{{item.img_dir}}" class="bd"></image>
     <view class="content">
-      <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/logo.png" class="logo"></image>
-      <text class="name">中国建设银行</text>
+      <image src="{{item.log_dir}}" class="logo"></image>
+      <text class="name">{{item.name}}</text>
       <view class="clearfix"></view>
       <view class="number">
-        <text>**** **** **** 1234</text>
+        <text>{{item.card_no}}</text>
       </view>
     </view>
   </view>
-   <view class="list">
-    <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/JSbd.png" class="bd"></image>
-    <view class="content">
-      <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/logo.png" class="logo"></image>
-      <text class="name">中国建设银行</text>
-      <view class="clearfix"></view>
-       <view class="number">
-        <text>**** **** **** 1234</text>
-      </view>
-    </view>
-  </view>
+   
 </view>
 <view class="add" catchtap="topassword">
   <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/addcard.png"></image>

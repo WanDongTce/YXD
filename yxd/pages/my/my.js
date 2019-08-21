@@ -1,11 +1,15 @@
 // pages/my/my.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    name:"",
+    address:"",
+    mobile:"",
+    imgurl:""
   },
   tomodify:function(){
     wx.navigateTo({
@@ -31,10 +35,35 @@ Page({
     })
   },
   onLoad: function (options) {
-
+    var that=this
+    that.gatlist()
   },
-
-  /**
+  gatlist:function(){
+    var that=this
+    var x = wx.getStorageSync("userinfo")
+    var id = x.id
+    wx.request({
+     
+      url: app.requestUrl + 'api/index/UserEdit',
+      method: "POST",
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      data: {
+        user_id: id
+      },
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          name: res.data.data.username,
+          address: res.data.data.province + res.data.data.city + res.data.data.area,
+          mobile: res.data.data.mobile,
+          imgurl: res.data.data.header
+        })
+      }
+    })
+  }
+,  /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {

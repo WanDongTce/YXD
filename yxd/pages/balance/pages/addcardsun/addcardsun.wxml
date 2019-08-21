@@ -13,7 +13,7 @@
     卡号：
     </view> 
     <view class="card-msg">
-      <input type="number" value="{{userInputCardNum}}" placeholder="请输入银行卡账号" placeholder-class="placeholder-tip" bindinput="bankcardInput"/>  
+      <input type="number" value="{{userInputCardNum}}" placeholder="请输入银行卡账号" placeholder-class="placeholder-tip" bindinput="bankcardInput" maxlength="22"/>  
     </view> 
     <view class="clearfix"></view>
   </view>
@@ -38,15 +38,25 @@
     </view> 
     <view class="clearfix"></view> 
   </view>
+  <view class="bind-card-item">
+    <view class="card-label">
+    银行名称：
+    </view> 
+    <view class="card-msg">
+      <input type="text"  placeholder="请输入银行名称" bindinput="bank" />  
+    </view> 
+    <view class="clearfix"></view> 
+  </view>
    <view class="bind-card-item">
     <view class="card-label">
     支行名称：
     </view> 
     <view class="card-msg">
-      <input type="text"  placeholder="请输入支行名称" />  
+      <input type="text"  placeholder="请输入支行名称" bindinput="branch" />  
     </view> 
     <view class="clearfix"></view> 
   </view>
-<view class="btn">
+  
+<view class="btn" catchtap="addcar">
   <text>下一步</text>
 </view>

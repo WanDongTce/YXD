@@ -3,7 +3,7 @@
 </view>
 <view class="username">
   <view class="content_box">
-    <input type="number" placeholder="请输入账号" bindinput="user_left_phone"></input>
+    <input type="number" placeholder="请输入账号" bindinput="user_left_phone" maxlength="11"></input>
   </view>
 </view>
 
@@ -12,7 +12,7 @@
     <input type="password" placeholder="请输入密码" bindinput="user_left_password"></input>
   </view>
 </view>
-<button open-type="getUserInfo" hover-class='none' bindgetuserinfo="getUserInfoFun" class="btn"><text>登录</text></button>
+<button open-type="getUserInfo" hover-class='none' catchtap="click_left_login" class="btn"><text>登录</text></button>
 <view class="register">
   还没有账户，<text catchtap="toregister">立即注册</text>
 </view>

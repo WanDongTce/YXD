@@ -104,6 +104,7 @@ Page({
     })
   },
   bindFormSubmit: function (e) {
+  
     var that = this;
     // 手机号
     var phone = that.data.user_right_phone
@@ -160,7 +161,7 @@ Page({
       })
     }else{
       wx.request({
-        url: app.requestUrl +'yuxile/public/index.php/api/Login/register',
+        url: app.requestUrl +'api/Login/register',
         method: "POST",
         header: {
           "Content-Type": "application/x-www-form-urlencoded"
@@ -172,7 +173,33 @@ Page({
           gym_no: Invitation//CSBeJzf58AbF
         },
         success:function(res){
-          console.log(res)
+          console.log(res.data)
+          var sss = res.data.data
+          var S = this;
+          wx.getUserInfo({
+            success: res => {
+              app.globalData.userInfo = res.userInfo
+              console.log(app.globalData.userInfo.avatarUrl)
+              wx.request({
+                url: app.requestUrl + 'api/Login/addUserInfo',
+                method: "POST",
+                header: {
+                  "Content-Type": "application/x-www-form-urlencoded"
+                },
+                data: {
+                  nickName: app.globalData.userInfo.nickName,
+                  avatarUrl: app.globalData.userInfo.avatarUrl,
+                  gender: app.globalData.userInfo.gender,
+                  user_id: sss
+                },
+                success: function (res) {
+                  console.log(res)
+                }
+              })
+             
+             
+            }
+          })
           wx.showToast({
             title: res.data.msg,
             icon: 'none'

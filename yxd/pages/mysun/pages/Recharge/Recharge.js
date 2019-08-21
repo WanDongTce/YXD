@@ -19,7 +19,7 @@ Page({
   getlist:function(){
     var that = this
     wx.request({
-      url: app.requestUrl + 'yuxile/public/index.php/api/Index/getCardInfo',
+      url: app.requestUrl + 'api/index/getCardInfo',
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded"

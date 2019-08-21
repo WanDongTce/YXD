@@ -1,6 +1,6 @@
 //app.js
 App({
-  requestUrl: 'http://10.40.92.84/',
+  requestUrl: 'http://agent.54xuebaxue.com/',
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -10,7 +10,21 @@ App({
     // 登录
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        if (res.code) {
+          console.log(res.code)
+          //发起网络请求
+          wx.request({
+            url: 'http://agent.54xuebaxue.com/index/Dbdoc',
+            data: {
+              code: res.code
+            },
+            success:function(res){
+              console.log(res)
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
       }
     })
     // 获取用户信息

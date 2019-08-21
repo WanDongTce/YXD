@@ -3,12 +3,12 @@
 </view>
 <view class="list_box">
  
-  <view class="content">
+  <view class="content" wx:for="{{list}}">
    <view class="name">
-    <text>2019年</text>
+    <text>{{item.year}}</text>
   </view>
-    <view class="list" wx:for="{{list}}">
-      <text>{{item.content}}</text>
+    <view class="list"  wx:for="{{item.content}}"  wx:for-item="items">
+      <text>{{items.content}}</text>
       <view class="spot"></view>
     </view>
     <view class="clearfix"></view>

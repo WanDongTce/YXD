@@ -37,7 +37,7 @@ Page({
     var that=this
     console.log(types)
     wx.request({
-      url: app.requestUrl +'yuxile/public/index.php/api/Index/getUserList',
+      url: app.requestUrl +'api/index/getUserList',
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded"

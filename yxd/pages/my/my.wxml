@@ -1,16 +1,17 @@
 <view class="header">
     <view class="content_box">
       <view class="photo">
+      <image src="{{imgurl}}"></image>
       </view>
     <view class="name_box">
       <view class="name">
-        <text>立即登录</text>
+        <text>{{name}}</text>
       </view>
       <view class="address">
-        <text>地点：辽宁省沈阳市沈阳区哈尔滨路</text>
+        <text>地点：{{address}}</text>
       </view>
        <view class="phone">
-        <text>电话：11111111111</text>
+        <text>电话：{{mobile}}</text>
       </view>
         <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/modify.png" class="modify" catchtap="tomodify"></image>
     </view>

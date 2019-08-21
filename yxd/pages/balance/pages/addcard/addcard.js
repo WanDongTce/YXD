@@ -1,20 +1,41 @@
 // pages/balance/pages/addcard/addcard.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    list:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that=this
+    that.getlist()
   },
-
+  getlist:function(){
+    var that=this
+    var x = wx.getStorageSync("userinfo")
+    var id = x.id
+    wx.request({
+      url: app.requestUrl + 'api/Info/MyCardList',
+      method: "POST",
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      data: {
+        user_id: id,
+      },
+      success:function(res){
+        that.setData({
+          list: res.data.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

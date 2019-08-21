@@ -31,7 +31,7 @@ Page({
   onShow:function(){
     var that=this
    var x=wx.getStorageSync("userinfo" )
-    console.log(x.length)
+    console.log(x)
     
     if (x<1) {
       wx.navigateTo({
@@ -56,10 +56,22 @@ var that=this
     
 
   },
+  copyBtn: function (e) {
+    var that = this;
+    wx.setClipboardData({
+      //准备复制的数据
+      data: that.data.gym_no,
+      success: function (res) {
+        wx.showToast({
+          title: '复制成功',
+        });
+      }
+    });
+  },
   getbanner:function(){
     var that=this
     wx.request({
-      url: app.requestUrl +'yuxile/public/index.php/api/Index/getBanner',
+      url: app.requestUrl +'api/index/getBanner',
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded"

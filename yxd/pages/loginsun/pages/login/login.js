@@ -38,17 +38,7 @@ Page({
   },
   getUserInfoFun: function () {
     var S = this;
-    wx.getUserInfo({
-      success: res => {
-        app.globalData.userInfo = res.userInfo
-        console.log(app.globalData.userInfo)
-        this.click_left_login()
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    })
+ 
   },
   click_left_login: function (e) {
     var that = this;
@@ -72,7 +62,7 @@ Page({
     else {
       console.log("成功")
       wx.request({
-        url: app.requestUrl + 'yuxile/public/index.php/api/Login/Login',
+        url: app.requestUrl + 'api/Login/Login',
         method: "POST",
         header: {
           "Content-Type": "application/x-www-form-urlencoded"

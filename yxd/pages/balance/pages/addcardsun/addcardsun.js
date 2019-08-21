@@ -1,6 +1,13 @@
 // pages/balance/pages/addcardsun/addcardsun.js
 
 var bankCard = require('../../../../utils/bankCard.js');
+var app = getApp();
+var card
+var username
+var cardType
+var phoneNum
+var branch
+var bank
 Page({
 
   /**
@@ -12,14 +19,16 @@ Page({
     bankName: '', // 银行名字
     cardType: '', // 银行卡类型
     user: '',// 持卡人姓名
-    phone: '' // 持卡人手机号
+    phone: '', // 持卡人手机号
+    branch:"",//支行
+    bank:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   bankcardInput: function (e) {
-    var card = e.detail.value;
+     card = e.detail.value;
 
 
     // 格式
@@ -55,26 +64,99 @@ Page({
     }
   },
   bankcardTypeInput: function (e) {
-    let cardTypeInput = e.detail.value;
+    cardType = e.detail.value;
     this.setData({
-      cardType: cardTypeInput
+      cardType: cardType
     })
   },
   // 持卡人姓名事件
   userInput: function (e) {
-    let username = e.detail.value;
+   username = e.detail.value;
     this.setData({
       user: username
     })
   },
   // 持卡人手机号事件
   phoneInput: function (e) {
-    let phoneNum = e.detail.value;
+    phoneNum = e.detail.value;
     this.setData({
       phone: phoneNum
     })
   }
 ,
+  bank: function (e) {
+    bank = e.detail.value;
+    this.setData({
+      bank: bank
+    })
+  },
+  branch: function (e) {
+    branch = e.detail.value;
+    this.setData({
+      branch: branch
+    })
+  },
+  addcar:function(){
+    console.log(card)
+    var x = wx.getStorageSync("userinfo")
+    if (username == undefined||username==""){
+     
+      wx.showToast({
+        title: '姓名不能为空',
+        icon: 'none',
+        duration: 1000
+      })
+    } else if (card == undefined || card == ""){
+      wx.showToast({
+        title: '银行卡不能为空',
+        icon: 'none',
+        duration: 1000
+      })
+    } else if (cardType == undefined || cardType == "") {
+      wx.showToast({
+        title: '银行卡类型不能为空',
+        icon: 'none',
+        duration: 1000
+      })
+    } else if (phoneNum == undefined || phoneNum == "") {
+      wx.showToast({
+        title: '手机号不能为空',
+        icon: 'none',
+        duration: 1000
+      })
+    } else if (bank == undefined || bank == "") {
+      wx.showToast({
+        title: '银行不能为空',
+        icon: 'none',
+        duration: 1000
+      })
+    } else if (branch == undefined || branch == "") {
+      wx.showToast({
+        title: '支行不能为空',
+        icon: 'none',
+        duration: 1000
+      })
+    }else{
+      console.log(cardType)
+      wx.request({
+        url: app.requestUrl +'api/Info/AddCardInfo',
+        method: "POST",
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        data:{
+          card_no: card,
+          type: cardType,
+          bank_name: branch,
+          user_id:x.id,
+          name:bank
+        },
+        success:function(res){
+          console.log(res)
+        }
+      })
+    }
+  },
   onLoad: function (options) {
 
   },
