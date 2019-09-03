@@ -19,9 +19,12 @@ font-weight: bold}
 .banner swiper-item{height: 160rpx !important;}
 .VIP{margin-top: 25rpx}
 .VIP .content_box{width: 705rpx;margin: 0 auto;height: 269rpx;background-image: url(http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/index/VIP02.png);background-size: 100% 100%;border-radius: 15rpx;overflow: hidden}
-.VIP .content_box .name text{font-size: 32rpx;color: #fff;height: 32rpx;line-height: 32rpx;display: block;
-margin-top: 24rpx;margin-left: 44rpx}
-.VIP .content_box .number{text-align: center;font-size: 30rpx;color: #fff;font-weight: bold;}
+.VIP .content_box .name .name_sun{font-size: 32rpx;color: #fff;height: 32rpx;line-height: 32rpx;display: block;
+margin-top: 24rpx;margin-left: 44rpx;float: left}
+.VIP .content_box .name .card{float: right;font-size: 32rpx;color: #fff;height: 32rpx;line-height: 32rpx;
+margin-top: 24rpx;margin-right: 44rpx}
+.VIP .content_box .name .card text{font-size: 50rpx}
+.VIP .content_box .number{text-align: center;font-size: 30rpx;color: #fff;margin-top: 20rpx}
 .VIP .content_box .number text{font-size: 80rpx;display: inline-block;line-height: 70rpx}
 .VIP .content_box .btn{width: 398rpx;margin: 0 auto;margin-top: 48rpx}
 .VIP .content_box .btn .Extension_sun{float: left;width: 118rpx;height: 48rpx;border: 2rpx solid #fff;
@@ -34,8 +37,16 @@ border-radius: 10rpx}
 .Extension .content_box{width: 705rpx;margin: 0 auto;height: 269rpx;background-image: url(http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/index/Extension.png);background-size: 100% 100%;border-radius: 15rpx;overflow: hidden}
 .Extension .content_box .name text{font-size: 32rpx;color: #fff;height: 32rpx;line-height: 32rpx;display: block;
 margin-top: 24rpx;margin-left: 44rpx}
-.Extension .content_box .number{width: 436rpx;margin: 0 auto;margin-top: 48rpx}
-.Extension .content_box .number text{font-size: 30rpx;display: block;float: left;color: #fff;line-height: 52rpx}
+.Extension .content_box .number{width: 250rpx;margin: 0 auto;margin-top: 48rpx}
+.Extension .content_box .number .people {font-size: 30rpx;display: block;float: left;color: #fff;}
+.Extension .content_box .number .people text {font-size: 80rpx;display: inline-block;line-height: 70rpx;
+font-weight: bold}
 .Extension .content_box .number .btn{float: right;font-size: 30rpx;line-height: 48rpx;border: 2rpx solid #fff;
-width: 118rpx;text-align: center;color: #fff;border-radius: 15rpx}
-.layer_box{width: 100%;height: 100%;position: fixed}
+width: 118rpx;text-align: center;color: #fff;border-radius: 15rpx;margin-top: 20rpx}
+.layer_box{width: 100%;height: 100%;position: fixed;left: 0;top: 0;background-color: rgba(0, 0, 0, 0.5);
+ display: none }
+  .layer_box .content{width: 100%;height: 100%;display: flex;
+  align-items: center;
+  justify-content: center;}
+.layer_box image{width: 254rpx;height: 254rpx}
+.show{display: block}

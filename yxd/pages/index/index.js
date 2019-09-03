@@ -13,9 +13,18 @@ Page({
     total_price:"",
     gym_no:"",
     card_num:"",
-    bannerlist:[]
+    bannerlist:[],
+    flg:true
     
   },
+  previewImage: function (e) {
+    var current = e.target.dataset.src;
+    wx.previewImage({
+      current: current,
+      urls: [current]
+    })
+  },
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
@@ -55,6 +64,18 @@ var that=this
     that.getbanner()
     
 
+  },
+  click:function(){
+    var that=this
+    that.setData({
+      flg:false
+    })
+  },
+  clisk02: function () {
+    var that = this
+    that.setData({
+      flg: true
+    })
   },
   copyBtn: function (e) {
     var that = this;

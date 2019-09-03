@@ -27,14 +27,18 @@
 <view class="VIP">
   <view class="content_box">
     <view class="name">
-      <text>有言VIP</text>
-    </view>
-    <view class="number">
+      <text class="name_sun">有言VIP</text>
+      <view class="card">
       剩余<text>{{card_num}}</text>张
     </view>
+    <view class="clearfix"></view>
+    </view>
+    <view class="number">
+      {{gym_no}}
+    </view>
     <view class="btn">
-      <view class="Extension_sun">
-        <text>推广</text>
+      <view class="Extension_sun" catchtap="copyBtn">
+        <text> 复制</text>
       </view>
       <view class="supplement" catchtap="toRecharge">
         <text>补充</text>
@@ -49,13 +53,19 @@
       <text>推广专员</text>
     </view>
     <view class="number">
-      <text>{{gym_no}}</text>
-      <view class="btn" catchtap="copyBtn">
-        复制
+      <view class="people">
+         <text>{{usersum}}</text>人
+      </view>
+      <view class="btn" catchtap="click" >
+       推广
       </view>
     </view>
   </view>
 </view>
-<view class="layer_box">
-
+<view class="layer_box {{flg==true?'':'show'}}" catchtap="clisk02">
+  <view class="content">
+    <image src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/CQ.png"mode="widthFix" 
+ data-src="http://m.54xuebaxue.com/wx_img/img/yingxiaoduan/my/CQ.png" 
+ bindtap="previewImage"></image>
+  </view>
 </view>

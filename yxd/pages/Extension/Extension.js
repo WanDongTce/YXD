@@ -1,6 +1,9 @@
 // pages/Extension/Extension.js
 const app = getApp()
 var types = 1
+var page=1
+var list_sun=[]
+var all
 Page({
 
   /**
@@ -26,13 +29,15 @@ Page({
     })
     idx = parseInt(idx)+1
     types=idx
-    that.getlist()
+    list_sun=[]
+    page=1
+    that.getlist(page)
   },
   onLoad: function (options) {
     var that=this
-    that.getlist()
+    that.getlist(page)
   },
-  getlist: function (){
+  getlist: function (page){
     var x=wx.getStorageSync("userinfo")
     var that=this
     console.log(types)
@@ -44,12 +49,17 @@ Page({
       },
       data:{
         first_user: x.gym_no,
-        type: types
+        type: types,
+        page: page
       },
       success:function(res){
-        console.log(res)
+        for (var i = 0; i < res.data.data.list.data.length;i++){
+          list_sun.push(res.data.data.list.data[i])
+        }
+        all = res.data.data.list.last_page
+       
       that.setData({
-        list: res.data.data.list,
+        list: list_sun,
         zj: res.data.data.usersum,
         lj: res.data.data.sum,
       })
@@ -95,7 +105,13 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    var that=this
+    console.log(all)
+    if (page<all){
+      page = page + 1
+      that.getlist(page)
+    }
+   
   },
 
   /**

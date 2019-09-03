@@ -1,6 +1,7 @@
 var util = require('../../../../utils/cityArray.js')
 var arrays = util.getAreaInfo();
 var app = getApp();
+
 Page({
 
   /**
@@ -244,20 +245,26 @@ getuser:function(){
       case 1:
         //滑动中列
         var di;
-        var sheng = that.data.global_sheng;
+        
+        if (that.data.global_sheng == undefined){
+          var sheng = 42;
+        }else{
+          var sheng = that.data.global_sheng;
+        }
+       
         list1 = cityArray[1];
         for (let i = 0, len = arrays.length; i < len; i++) {
           if (arrays[i]['name'] == cityArray[1][e.detail.value]) {
             di = arrays[i]['di'];
           }
         }
-        
+        console.log(di)
         for (let i = 0, len = arrays.length; i < len; i++) {
           if (arrays[i]['sheng'] == sheng && arrays[i]['level'] == 3 && arrays[i]['di'] == di) {
-            
+            console.log(arrays[i]['sheng'])
             list2.push(arrays[i]['name']);
           }
-          console.log(di)
+    
         }
         citysIndex = [that.data.citysIndex[0], e.detail.value, 0];
         
